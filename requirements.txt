@@ -1,0 +1,25 @@
+**Libraries to be installed:**
+Flask
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+**Structure of project :**
+RISING-WATERS/
+│
+├── app.py
+├── flood_model.pkl
+├── flood dataset.csv
+├── rising-proj.ipynb
+├── requirements.txt
+├── README.md
+│
+├── templates/
+│   ├── index.html
+│   ├── chance.html
+│   └── no_chance.html
+│
+├── static/
+│   ├── main.css
+│   └── main.js
