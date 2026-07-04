@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 style="height: 10px;">Flood Prediction System</h2>
+
+<form action="/predict" method="POST">
+
+<label>Temperature</label>
+<input type="number" step="any" name="Temp" required>
+
+<label>Humidity</label>
+<input type="number" step="any" name="Humidity" required>
+
+<label>Cloud Cover</label>
+<input type="number" step="any" name="Cloud_Cover" required>
+
+<label>Annual Rainfall</label>
+<input type="number" step="any" name="ANNUAL" required>
+
+<label>Jan-Feb Rainfall</label>
+<input type="number" step="any" name="Jan_Feb" required>
+
+<label>Mar-May Rainfall</label>
+<input type="number" step="any" name="Mar_May" required>
+
+<label>Jun-Sep Rainfall</label>
+<input type="number" step="any" name="Jun_Sep" required>
+
+<label>Oct-Dec Rainfall</label>
+<input type="number" step="any" name="Oct_Dec" required>
+
+<label>Average June Rainfall</label>
+<input type="number" step="any" name="avgjune" required>
+
+<label>Subdivision</label>
+<input type="number" step="any" name="sub" required>
+
+<button type="submit">Predict Flood</button>
+
+</form>
+
+{% if prediction %}
+
+<h3>{{ prediction }}</h3>
+
+{% endif %}
+
+</div>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
